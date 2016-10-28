@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bcl.Messaging
+{
+    public class MessageBase
+    {
+        public Guid MessageID { get; set; }
+
+        public string TypeName { get; set; }
+
+        public MessageBase()
+        {
+            MessageID = Guid.NewGuid();
+            TypeName = this.GetType().Name;
+        }
+
+    }
+
+}
